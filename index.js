@@ -1,7 +1,20 @@
 const express = require('express');
+const { Pool, Client } = require('pg');
+
 
 const app = express();
-const listenPort = 4000;
+
+const link = "climbs-db.c5tvyr0esqzh.us-west-2.rds.amazonaws.com";
+const username = "root"
+const password = "Punksnotdead2016!"
+const listenPort = 5432;
+
+const pool = new Pool();
+
+pool.query('SELECT NOW',(error, result) =>{
+    console.log(error, result);
+    pool.end();
+})
 
 //middleware
 app.use('/posts', () =>{

@@ -1,5 +1,5 @@
 const mysql = require('mysql');
 
-let connetion= mysql.createConnection({
-
+let connetion = mysql.createConnection({
+    
 })
