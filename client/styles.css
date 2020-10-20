@@ -1,0 +1,20 @@
+.title {
+    text-align: center;
+}
+
+.form1{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form2{
+    width: 50%;
+    height: 9%;
+    margin: 0 auto;
+}
+
+.loading {
+    width: 20%;
+    height: 20%;
+    align-self: center;
+}
