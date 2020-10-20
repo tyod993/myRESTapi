@@ -1,8 +1,11 @@
 const express = require('express');
+//const cors = require('cors');
 const { Pool, Client } = require('pg');
 
 
 const app = express();
+//app.use(cors());
+app.use(express.json());
 
 app.listen((5000), ()=>{
     console.log("Started listening on port 5000");
@@ -23,14 +26,5 @@ app.use('/posts', () =>{
 })
 
 app.post('/save', (req, res) =>{
-
+    console.log(req.body);
 })
-
-//routes
-app.get('/', (req,res) => {
-    res.send("Looks like it worked")
-})
-
-app.get('/users', (req,res) => {
-
-} )
