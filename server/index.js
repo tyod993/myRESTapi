@@ -30,5 +30,9 @@ app.post('/save', (req, res) =>{
 })
 
 app.get('/get_all', (req, res) => {
-    console.log(req.body())
+    console.log(req.body());
+})
+
+app.get('/get_user_sessions', (req, res ) =>{
+    console.log(res.body());
 })
