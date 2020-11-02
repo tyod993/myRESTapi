@@ -34,6 +34,10 @@ app.post('/save', (req, res) =>{
     console.log(req.body);
 })
 
+app.put('/new', () =>{
+    
+})
+
 app.get('/get_all', (req, res) => {
     console.log(req.body());
 })
