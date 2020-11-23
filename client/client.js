@@ -18,16 +18,25 @@ form.addEventListener('submit', async (event) =>{
     form.style.display = 'none';
 
     const input = {
-        liftName, reps, rir, set,
+        "liftname" :liftName, "reps":reps, "rir":rir, "set":set,
     };
 
     console.log(input);
 
-    await fetch(('http://localhost:5000/save'), {
+    fetch(('http://localhost:5000/save'), {
         method: 'POST',
-        mode: 'no-cors',
+        //mode: 'no-cors',
+        //credentials: "omit",
         body: JSON.stringify(input),
         headers: {'Content-Type' : 'application/json'},
-    })
+    });
+    /*.then(response => response.json())
+.then(result => {
+  console.log('Success:', result);
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+*/
     
 })
